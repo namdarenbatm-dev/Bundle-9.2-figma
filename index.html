@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#123d5a">
+<meta name="description" content="سامانه طراحی مدل فروش محصولات کارتخوان توسن تکنو - نسخه ۹.۲">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Smart Bundle">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./assets/icon-192.png">
+<title>Smart Bundle | نسخه ۹.۲</title>
+<style>
+@font-face{font-family:Yekan;src:url('./assets/Yekan.ttf') format('truetype');font-display:swap}
+:root{font-family:Yekan,Tahoma,sans-serif;color:#18384e;background:#f3f6f9;--navy:#123d5a;--blue:#176b9a;--orange:#f28c28;--line:#dbe5eb;--muted:#718494;--green:#17795f;--red:#b93848}
+*{box-sizing:border-box}body{margin:0;line-height:1.75;background:#f3f6f9}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1380px;margin:auto;padding:18px}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;background:var(--navy);color:#fff;border-radius:18px;padding:18px 22px}.brand{display:flex;align-items:center;gap:15px}.brand img{width:82px;height:58px;object-fit:contain;background:white;border-radius:10px;padding:5px}.brand h1{font-size:22px;margin:0}.brand p{font-size:12px;margin:2px 0 0;color:#d6e8f2}.actions,.tabs,.btnrow{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #d2dfe7;background:#fff;color:#24475f;border-radius:9px;padding:8px 13px;font-weight:700;font-size:12px}.btn.primary{background:var(--orange);color:#fff;border-color:var(--orange)}.btn.active,.btn.selected{background:var(--orange)!important;color:#fff!important;border-color:var(--orange)!important}.tabs{background:#fff;border:1px solid var(--line);border-radius:12px;margin:16px 0;padding:6px}.tab{border:0;background:transparent;padding:10px 18px;border-radius:9px;color:#61798a;font-weight:bold}.tab.active{background:var(--orange);color:#fff}.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 6px 20px #193c5208}.heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px}.heading h2{margin:0;font-size:19px;color:var(--navy)}.heading p{margin:2px 0;color:var(--muted);font-size:12px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.field{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:bold}.field small{font-weight:normal;color:var(--muted)}.field input,.field select{width:100%;border:1px solid #d7e2e9;border-radius:9px;padding:10px;background:#fbfdfe;color:#18384e}.field input:focus,.field select:focus{outline:2px solid #f28c2844;border-color:var(--orange)}.subhead{margin:18px 0 10px;font-size:14px;color:var(--blue);border-right:3px solid var(--orange);padding-right:9px}.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0}.kpi{border:1px solid var(--line);border-radius:12px;padding:13px;background:#fcfdfe}.kpi span{font-size:11px;color:var(--muted);display:block}.kpi strong{font-size:17px;color:var(--navy)}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:right;padding:11px 10px;border-bottom:1px solid #e7edf1;font-size:12px;white-space:nowrap}th{background:#f5f8fa;color:#526e80;font-weight:bold}.status{display:inline-block;border-radius:20px;padding:3px 9px;font-size:11px;background:#e9f7f0;color:var(--green)}.status.off{background:#f0f3f5;color:#718494}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.bundle{border:1px solid var(--line);border-radius:14px;padding:15px;background:#fff}.bundle h3{margin:0;font-size:15px}.bundle .muted{font-size:11px;color:var(--muted)}.price{font-size:22px;font-weight:bold;color:var(--blue)}.rowline{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed #e1e8ed;padding:7px 0;font-size:12px}.rowline:last-child{border-bottom:0}.notice{padding:10px 12px;border-radius:9px;background:#fff5e9;color:#8a581b;font-size:12px;margin-top:10px}.empty{padding:24px;text-align:center;color:var(--muted);border:1px dashed #c9d8e1;border-radius:12px}.view{display:none}.view.active{display:block}.modalback{position:fixed;inset:0;background:#0a2438a8;display:none;align-items:center;justify-content:center;padding:16px;z-index:20}.modalback.open{display:flex}.modal{background:white;border-radius:16px;width:min(620px,100%);max-height:90vh;overflow:auto;padding:20px}.modalhead{display:flex;align-items:center;justify-content:space-between;gap:10px}.modalhead h2{font-size:18px;margin:0}.x{border:0;background:#eef3f6;border-radius:8px;padding:5px 11px}.splash{position:fixed;inset:0;z-index:30;background:#123d5a;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;transition:opacity .35s}.splash img{width:190px;height:125px;object-fit:contain;background:#fff;border-radius:16px;padding:12px}.splash h2{margin:15px 0 0}.splash p{color:#d6e8f2;font-size:13px}.splash.hide{opacity:0;pointer-events:none}.hint{font-size:11px;color:var(--muted)}.danger{color:var(--red)}.footer{text-align:center;color:#8a9aa6;font-size:10px;padding:10px}.orange-rule{height:3px;background:var(--orange);border-radius:4px;width:80px;margin:8px 0 16px}
+@media(max-width:850px){.wrap{padding:10px}.top{align-items:flex-start;flex-direction:column}.actions{width:100%}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.cards{grid-template-columns:1fr}.brand h1{font-size:18px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.panel{padding:14px}.heading{align-items:flex-start;flex-direction:column}.tab{flex:1;padding:9px 5px;font-size:11px}.brand img{width:64px;height:48px}.brand h1{font-size:16px}.kpi strong{font-size:15px}.actions .btn{flex:1}}
+@media print{.top-actions,.tabs,.btn,.actions,.no-print{display:none!important}.view{display:block!important}.panel,.bundle{break-inside:avoid;box-shadow:none}.wrap{max-width:none;padding:0}}
+</style>
+</head>
+<body>
+<div id="splash" class="splash"><img src="./assets/tosan-techno-logo.png" alt="لوگوی توسن تکنو"><h2>سامانه طراحی مدل فروش محصولات کارتخوان توسن تکنو</h2><p>مهدی نامدار · نسخه ۹.۲</p></div>
+<div class="wrap">
+<header class="top">
+ <div class="brand"><img src="./assets/tosan-techno-logo.png" alt="توسن تکنو"><div><h1>Smart Bundle | نسخه ۹.۲</h1><p>سامانه طراحی مدل فروش محصولات کارتخوان توسن تکنو</p></div></div>
+ <div class="actions top-actions"><button class="btn" id="exportBtn">خروجی CSV</button><button class="btn" id="printBtn">چاپ / ذخیره PDF</button><button class="btn" id="clearBtn">پاکسازی داده‌ها</button><button class="btn primary" id="installBtn" hidden>نصب برنامه</button></div>
+</header>
+<nav class="tabs no-print"><button class="tab active" data-view="management">مدیریت بسته‌ها</button><button class="tab" data-view="broker">نمای کارگزار</button><button class="tab" data-view="formulas">فرمول‌ها و راهنما</button></nav>
+<section class="view active" id="management">
+ <div class="panel">
+  <div class="heading"><div><h2>پارامترهای مدل شاپرکی</h2><p>مبالغ بر حسب میلیون تومان هستند. مدل شتابی در این نسخه استفاده نمی‌شود.</p></div><span class="status">نسخه ۹.۲ · مدل شاپرکی</span></div>
+  <div class="subhead">قیمت‌گذاری و اقتصاد کشلس</div>
+  <div class="grid">
+   <label class="field">قیمت پایه هر کارتخوان<input id="posBase" type="number" min="0" step=".1" value="19"></label>
+   <label class="field">قیمت کف رقابتی کارتخوان<input id="marketFloor" type="number" min="0" step=".1" value="15"><small>قیمت کارتخوان پایین‌تر از این مقدار نمی‌رود.</small></label>
+   <label class="field">بودجه بازاریابی به‌ازای هر کارتخوان<input id="marketing" type="number" min="0" step=".1" value="2"><small>تخصیص مدیریتی برای ثبت‌نام/معرفی؛ تخفیف نیست.</small></label>
+   <label class="field">بهای تمام‌شده هر کشلس<input id="cashCost" type="number" min="0" step=".1" value="25"></label>
+   <label class="field">قیمت فروش هر کشلس<input id="cashSale" type="number" min="0" step=".1" value="42"></label>
+   <label class="field">سود ثابت موردنظر هر کشلس<input id="cashProfit" type="number" min="0" step=".1" value="2"></label>
+  </div>
+  <div class="subhead">تولید بسته‌ها</div>
+  <div class="grid">
+   <label class="field">روش تولید<select id="method"><option value="all">تولید همه ترکیب‌های معتبر</option><option value="manual">تعداد ثابت کارتخوان</option></select></label>
+   <label class="field">حداکثر تعداد کارتخوان<input id="maxPos" type="number" min="1" max="500" step="1" value="10"></label>
+   <label class="field">حداکثر تعداد کشلس<input id="maxCash" type="number" min="1" max="500" step="1" value="5"></label>
+   <label class="field" id="manualPosWrap" hidden>تعداد کارتخوان در بسته ثابت<input id="manualPos" type="number" min="1" max="500" step="1" value="5"></label>
+  </div>
+  <div class="btnrow" style="margin-top:16px"><button class="btn primary" id="generateBtn">تولید / به‌روزرسانی بسته‌ها</button><button class="btn" id="defaultsBtn">بازگردانی مقادیر نمونه</button></div>
+  <p id="message" class="hint" role="status"></p>
+ </div>
+ <div class="panel">
+  <div class="heading"><div><h2>خلاصه اقتصادی مدل</h2><p>محاسبه مدیریتی مستقل از نمایش قیمت نهایی بسته به کارگزار</p></div></div>
+  <div class="kpis">
+   <div class="kpi"><span>بودجه نهایی هر کشلس</span><strong id="capacity">—</strong></div>
+   <div class="kpi"><span>سود ثابت کشلس</span><strong id="profitPct">—</strong></div>
+   <div class="kpi"><span>ترکیب‌های تولیدشده</span><strong id="bundleCount">۰</strong></div>
+   <div class="kpi"><span>ترکیب‌های منتشرشده</span><strong id="publishedCount">۰</strong></div>
+  </div>
+ </div>
+ <div class="panel">
+  <div class="heading"><div><h2>فهرست بسته‌ها</h2><p>جزئیات اقتصادی در پنجره جداگانه باز می‌شود؛ انتشار هر بسته مستقل است.</p></div><span class="status" id="tableCount">۰ بسته</span></div>
+  <div id="bundleTable" class="tablewrap"><div class="empty">برای شروع، «تولید / به‌روزرسانی بسته‌ها» را بزن.</div></div>
+ </div>
+</section>
+<section class="view" id="broker">
+ <div class="panel">
+  <div class="heading"><div><h2>نمای کارگزار</h2><p>فقط بسته‌های منتشرشده نمایش داده می‌شوند.</p></div></div>
+  <div class="grid"><label class="field">بودجه در اختیار کارگزار (میلیون تومان)<input id="brokerBudget" type="number" min="0" step=".1" placeholder="مثلاً ۲۰۰"></label></div>
+  <div class="btnrow" style="margin-top:12px"><button class="btn primary" id="matchBtn">پیدا کردن بسته‌های متناسب با بودجه</button></div>
+  <div id="brokerSummary" class="hint" style="margin-top:12px"></div>
+  <div id="brokerCards" class="cards" style="margin-top:14px"><div class="empty">هنوز بسته‌ای منتشر نشده است.</div></div>
+ </div>
+</section>
+<section class="view" id="formulas">
+ <div class="panel">
+  <div class="heading"><div><h2>فرمول‌های مدل شاپرکی</h2><p>مقادیر بر حسب میلیون تومان</p></div></div>
+  <div class="orange-rule"></div>
+  <h3 class="subhead">بودجه نهایی باندلینگ</h3>
+  <p>بودجه نهایی هر کشلس = قیمت فروش کشلس − بهای تمام‌شده کشلس − سود ثابت کشلس − بودجه بازاریابی هر کارتخوان</p>
+  <h3 class="subhead">قیمت کارتخوان در بسته</h3>
+  <p>بودجه کل بسته = بودجه نهایی هر کشلس × تعداد کشلس</p>
+  <p>حداکثر تخفیف قابل‌تخصیص هر کارتخوان = بودجه کل بسته ÷ تعداد کارتخوان</p>
+  <p>قیمت کارتخوان در بسته = بیشینهِ (قیمت کف رقابتی، قیمت پایه − حداکثر تخفیف قابل‌تخصیص)</p>
+  <div class="notice">شرط مدل شاپرکی: تعداد کارتخوان باید بیشتر از تعداد کشلس باشد. بسته با بودجه منفی یا سود ثابت تأمین‌نشده معتبر نیست. بودجه بازاریابی فقط در فرمول مدیریتی لحاظ می‌شود و به قیمت کارتخوان اضافه نمی‌شود.</div>
+  <p class="hint">توجه: ارزش بسته برای کارگزار بر اساس قیمت تعدیل‌شده کارتخوان و قیمت فروش اعلام‌شده کشلس محاسبه می‌شود. جزئیات اقتصادی مدیریتی در نمای مدیریت باقی می‌ماند.</p>
+ </div>
+</section>
+<div class="footer">Smart Bundle · سامانه طراحی مدل فروش محصولات کارتخوان توسن تکنو · نسخه ۹.۲</div>
+</div>
+<div id="modalBack" class="modalback" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modalhead"><h2 id="modalTitle">جزئیات اقتصادی بسته</h2><button class="x" id="closeModal">بستن ×</button></div><div id="modalContent"></div></div></div>
+<script>
+const $=id=>document.getElementById(id);
+const defaults={posBase:19,marketFloor:15,marketing:2,cashCost:25,cashSale:42,cashProfit:2,maxPos:10,maxCash:5,method:'all',manualPos:5};
+const fmt=n=>Number(n).toLocaleString('fa-IR',{maximumFractionDigits:2});
+const money=n=>`${fmt(n)} میلیون تومان`;
+let bundles=[], deferredPrompt=null, currentModal=null;
+function read(){return Object.fromEntries(Object.keys(defaults).map(k=>[k,$(k).value===''?'':(['method'].includes(k)?$(k).value:Number($(k).value))]));}
+function validate(x){
+ const errors=[];
+ for(const k of ['posBase','marketFloor','marketing','cashCost','cashSale','cashProfit','maxPos','maxCash']) if(x[k]===''||!Number.isFinite(Number(x[k]))||Number(x[k])<0) errors.push('همه ورودی‌ها باید عدد معتبر و نامنفی باشند.');
+ if(!Number.isInteger(Number(x.maxPos))||x.maxPos<1||x.maxPos>500) errors.push('سقف کارتخوان باید عدد صحیح بین ۱ تا ۵۰۰ باشد.');
+ if(!Number.isInteger(Number(x.maxCash))||x.maxCash<1||x.maxCash>500) errors.push('سقف کشلس باید عدد صحیح بین ۱ تا ۵۰۰ باشد.');
+ if(Number(x.cashCost)<=0) errors.push('بهای تمام‌شده کشلس باید بیشتر از صفر باشد.');
+ if(Number(x.marketFloor)>Number(x.posBase)) errors.push('قیمت کف رقابتی نباید از قیمت پایه کارتخوان بیشتر باشد.');
+ if(Number(x.cashSale)-Number(x.cashCost)-Number(x.cashProfit)-Number(x.marketing)<0) errors.push('با این اعداد بودجه نهایی هر کشلس منفی است؛ قیمت فروش، هزینه، سود ثابت یا بودجه بازاریابی را اصلاح کن.');
+ return [...new Set(errors)];
+}
+function calc(x){
+ const posBase=+x.posBase, floor=+x.marketFloor, marketing=+x.marketing, cost=+x.cashCost, sale=+x.cashSale, profit=+x.cashProfit;
+ const capacity=sale-cost-profit-marketing, maxPos=+x.maxPos, maxCash=Math.min(+x.maxCash,maxPos-1);
+ const posRange=x.method==='manual'?[+x.manualPos]:Array.from({length:maxPos},(_,i)=>i+1);
+ const out=[];
+ for(const posCount of posRange){
+  if(!Number.isInteger(posCount)||posCount<2||posCount>maxPos) continue;
+  for(let cashCount=1;cashCount<=Math.min(maxCash,posCount-1);cashCount++){
+   const totalBudget=capacity*cashCount;
+   const price=Math.max(floor,posBase-totalBudget/posCount);
+   const used=(posBase-price)*posCount;
+   const remaining=totalBudget-used;
+   const requiredProfit=profit*cashCount;
+   const total=price*posCount+sale*cashCount;
+   const valid=capacity>=0&&remaining>=-1e-7&&price>=floor-1e-7;
+   out.push({id:`${posCount}-${cashCount}`,posCount,cashCount,capacity,totalBudget,price,used,remaining,total,valid,published:false,profit:requiredProfit,marketing,base:posBase,floor,cost,sale,cashProfit:profit});
+  }
+ }
+ return out.sort((a,b)=>a.posCount-b.posCount||a.cashCount-b.cashCount);
+}
+function render(){
+ const host=$('bundleTable');
+ $('bundleCount').textContent=fmt(bundles.length);
+ $('publishedCount').textContent=fmt(bundles.filter(b=>b.published).length);
+ $('tableCount').textContent=`${fmt(bundles.length)} بسته`;
+ if(!bundles.length){host.innerHTML='<div class="empty">بسته‌ای تولید نشده است.</div>';return;}
+ host.innerHTML=`<table><thead><tr><th>ترکیب بسته</th><th>قیمت هر کارتخوان</th><th>بودجه کل</th><th>مبلغ کل بسته</th><th>وضعیت</th><th>عملیات</th></tr></thead><tbody>${bundles.map(b=>`<tr><td>${fmt(b.posCount)} کارتخوان + ${fmt(b.cashCount)} کشلس</td><td>${money(b.price)}</td><td>${money(b.totalBudget)}</td><td><b>${money(b.total)}</b></td><td><span class="status ${b.published?'':'off'}">${b.published?'منتشرشده':'منتشرنشده'}</span></td><td><button class="btn" data-details="${b.id}">جزئیات</button> <button class="btn ${b.published?'':'primary'} ${b.published?'active':''}" data-publish="${b.id}">${b.published?'عدم انتشار':'انتشار'}</button></td></tr>`).join('')}</tbody></table>`;
+ host.querySelectorAll('[data-details]').forEach(btn=>btn.onclick=()=>showDetails(btn.dataset.details));
+ host.querySelectorAll('[data-publish]').forEach(btn=>btn.onclick=()=>{const b=bundles.find(x=>x.id===btn.dataset.publish);b.published=!b.published;save();render();});
+}
+function showDetails(id){
+ const b=bundles.find(x=>x.id===id);if(!b)return;currentModal=id;
+ $('modalTitle').textContent=`جزئیات اقتصادی · ${fmt(b.posCount)} کارتخوان + ${fmt(b.cashCount)} کشلس`;
+ $('modalContent').innerHTML=`
+ <div class="kpis"><div class="kpi"><span>بودجه نهایی هر کشلس</span><strong>${money(b.capacity)}</strong></div><div class="kpi"><span>بودجه کل ترکیب</span><strong>${money(b.totalBudget)}</strong></div></div>
+ <div class="rowline"><span>قیمت پایه کارتخوان</span><b>${money(b.base)}</b></div>
+ <div class="rowline"><span>قیمت کف رقابتی</span><b>${money(b.floor)}</b></div>
+ <div class="rowline"><span>بودجه بازاریابی اختصاص‌یافته به هر کارتخوان</span><b>${money(b.marketing)}</b></div>
+ <div class="rowline"><span>تخفیف اعمال‌شده هر کارتخوان</span><b>${money(b.base-b.price)}</b></div>
+ <div class="rowline"><span>بودجه مصرف‌شده برای کاهش قیمت کارتخوان‌ها</span><b>${money(b.used)}</b></div>
+ <div class="rowline"><span>بودجه باقی‌مانده</span><b>${money(b.remaining)}</b></div>
+ <div class="rowline"><span>سود ثابت کل کشلس‌ها</span><b>${money(b.profit)}</b></div>
+ <div class="rowline"><span>مبلغ کل قابل ارائه به کارگزار</span><b>${money(b.total)}</b></div>
+ <p class="hint">این پنجره برای مدیریت است. قیمت بهای تمام‌شده یا سود کارتخوان محاسبه یا نمایش داده نمی‌شود.</p>`;
+ $('modalBack').classList.add('open');
+}
+function save(){try{localStorage.setItem('technoBundle92',JSON.stringify({inputs:read(),bundles}));}catch(e){}}
+function load(){try{const s=JSON.parse(localStorage.getItem('technoBundle92')||'null');if(!s)return;for(const k of Object.keys(defaults))if(s.inputs&&s.inputs[k]!==undefined)$(k).value=s.inputs[k];if(Array.isArray(s.bundles))bundles=s.bundles;}catch(e){}}
+function generate(){
+ const x=read(),errors=validate(x);if(x.method==='manual'&&(!Number.isInteger(+x.manualPos)||+x.manualPos<2||+x.manualPos>+x.maxPos))errors.push('تعداد ثابت کارتخوان باید عدد صحیح و حداقل ۲ و کمتر یا مساوی سقف کارتخوان باشد.');
+ if(errors.length){$('message').className='hint danger';$('message').textContent=errors.join(' ');return;}
+ const capacity=+x.cashSale-+x.cashCost-+x.cashProfit-+x.marketing;
+ $('capacity').textContent=money(capacity);
+ $('profitPct').textContent=`${fmt((+x.cashProfit/+x.cashCost)*100)}٪ مارک‌آپ`;
+ bundles=calc(x);
+ $('message').className='hint';$('message').textContent=`${fmt(bundles.length)} ترکیب معتبر تولید شد. تعداد کشلس در همه بسته‌ها کمتر از تعداد کارتخوان است.`;
+ render();save();
+}
+function broker(){
+ const budget=+$('brokerBudget').value,host=$('brokerCards');
+ if(!Number.isFinite(budget)||budget<=0){$('brokerSummary').textContent='بودجه معتبر را وارد کن.';return;}
+ const found=bundles.filter(b=>b.published&&b.valid&&b.total<=budget).sort((a,b)=>b.posCount-a.posCount||a.price-b.price);
+ $('brokerSummary').textContent=found.length?`${fmt(found.length)} بسته منتشرشده با بودجه شما سازگار است.`:'با بودجه واردشده بسته منتشرشده‌ای پیدا نشد.';
+ host.innerHTML=found.length?found.map(b=>`<article class="bundle"><div class="heading"><h3>${fmt(b.posCount)} کارتخوان + ${fmt(b.cashCount)} کشلس</h3><span class="status">منتشرشده</span></div><div class="muted">قیمت هر کارتخوان در بسته</div><div class="price">${money(b.price)}</div><div class="rowline"><span>جمع کارتخوان‌ها</span><b>${money(b.price*b.posCount)}</b></div><div class="rowline"><span>قیمت فروش هر کشلس</span><b>${money(b.sale)}</b></div><div class="rowline"><span>مبلغ کل بسته</span><b>${money(b.total)}</b></div><div class="hint">مانده بودجه شما: ${money(budget-b.total)}</div></article>`).join(''):'<div class="empty">بسته‌ای برای نمایش وجود ندارد. از مدیر بخواهید بسته‌های مناسب را منتشر کند.</div>';
+}
+document.querySelectorAll('[data-view]').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b===btn));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===btn.dataset.view));}));
+$('method').addEventListener('change',()=>{$('manualPosWrap').hidden=$('method').value!=='manual';});
+$('generateBtn').onclick=generate;
+$('defaultsBtn').onclick=()=>{for(const [k,v] of Object.entries(defaults))$(k).value=v;$('manualPosWrap').hidden=true;generate();};
+$('matchBtn').onclick=broker;
+$('closeModal').onclick=()=>$('modalBack').classList.remove('open');
+$('modalBack').onclick=e=>{if(e.target===$('modalBack'))$('modalBack').classList.remove('open');};
+$('clearBtn').onclick=()=>{if(confirm('تمام بسته‌ها و تنظیمات ذخیره‌شده پاک شود؟')){localStorage.removeItem('technoBundle92');bundles=[];render();$('brokerCards').innerHTML='<div class="empty">داده‌ها پاک شد.</div>';$('message').textContent='داده‌های ذخیره‌شده پاک شد.';$('capacity').textContent='—';$('profitPct').textContent='—';$('bundleCount').textContent='۰';$('publishedCount').textContent='۰';}};
+$('printBtn').onclick=()=>window.print();
+$('exportBtn').onclick=()=>{const rows=[['تعداد کارتخوان','تعداد کشلس','قیمت هر کارتخوان','بودجه کل','بودجه مصرف‌شده','بودجه باقی‌مانده','مبلغ کل','وضعیت انتشار'],...bundles.map(b=>[b.posCount,b.cashCount,b.price,b.totalBudget,b.used,b.remaining,b.total,b.published?'منتشرشده':'منتشرنشده'])];const csv='\ufeff'+rows.map(r=>r.map(v=>`"${String(v).replaceAll('"','""')}"`).join(',')).join('\r\n');const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8;'}));a.download='techno-bundle-9-2.csv';a.click();URL.revokeObjectURL(a.href);};
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;$('installBtn').hidden=false;});
+$('installBtn').onclick=async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;$('installBtn').hidden=true;};
+load();$('manualPosWrap').hidden=$('method').value!=='manual';if(!bundles.length)generate();else{const x=read();$('capacity').textContent=money(+x.cashSale-+x.cashCost-+x.cashProfit-+x.marketing);$('profitPct').textContent=`${fmt((+x.cashProfit/+x.cashCost)*100)}٪ مارک‌آپ`;render();}
+setTimeout(()=>$('splash').classList.add('hide'),5000);
+if('serviceWorker' in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+</script>
+</body></html>
